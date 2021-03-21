@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>343</x>
+      <y>287</y>
+      <w>238</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Context&gt;&gt;
+ToDoItem
+--
+-startTime: DateAndTime
+-comments: String [*]
+--
+_+new(aName: String):ToDoItem_
++addComment(aComment: String)
++finish()
++initialize()
++start()
++startTime()
++startTime(anObject: DateAndTime)
++state(aState: ToDoItemState)
++togglePause()
++workedTime()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>756</x>
+      <y>287</y>
+      <w>238</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;State&gt;&gt;
+ToDoItemState
+--
+
+--
++addComment(aComment: String)
++finish()
++start())
++togglePause()
++workedTime()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>574</x>
+      <y>315</y>
+      <w>196</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=-context
+m2=-state</panel_attributes>
+    <additional_attributes>10.0;10.0;260.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1155</x>
+      <y>707</y>
+      <w>238</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;ConcreteState&gt;&gt;
+ToDoItemFinishedState
+--
+
+--
++addComment(aComment: String)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>343</x>
+      <y>707</y>
+      <w>238</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;ConcreteState&gt;&gt;
+ToDoItemPendingState
+--
+
+--
++start()
++workedTime()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>602</x>
+      <y>707</y>
+      <w>238</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;ConcreteState&gt;&gt;
+ToDoItemInProgressState
+--
+
+--
++finish()
++togglePause()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>875</x>
+      <y>707</y>
+      <w>238</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;ConcreteState&gt;&gt;
+ToDoItemPausedState
+--
+
+--
++finish()
++togglePause()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>861</x>
+      <y>399</y>
+      <w>21</w>
+      <h>182</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;240.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>448</x>
+      <y>560</y>
+      <w>434</w>
+      <h>161</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;210.0;10.0;10.0;600.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>861</x>
+      <y>560</y>
+      <w>434</w>
+      <h>161</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>600.0;210.0;600.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>721</x>
+      <y>560</y>
+      <w>21</w>
+      <h>161</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;210.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>994</x>
+      <y>560</y>
+      <w>21</w>
+      <h>161</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;210.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>84</x>
+      <y>140</y>
+      <w>119</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>finish
+
+state finish.
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>42</x>
+      <y>252</y>
+      <w>119</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>start
+
+state start.
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>42</x>
+      <y>357</y>
+      <w>119</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>togglePause
+
+state togglePause.
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>238</x>
+      <y>91</y>
+      <w>154</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>addComment: aComment
+
+state addComment: aComment.
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>49</x>
+      <y>490</y>
+      <w>119</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>workedTime
+
+state workedTime.
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>266</x>
+      <y>133</y>
+      <w>91</w>
+      <h>238</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>110.0;320.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>175</x>
+      <y>182</y>
+      <w>182</w>
+      <h>203</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>240.0;270.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>147</x>
+      <y>294</y>
+      <w>210</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>280.0;140.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>154</x>
+      <y>378</y>
+      <w>203</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>270.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>84</x>
+      <y>448</y>
+      <w>294</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>400.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+</diagram>

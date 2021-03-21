@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>450</x>
+      <y>110</y>
+      <w>290</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>EvernOOte
+--
+_-UniqueInstance: EvernOOte_
+--
+_+singleton(): SpOOtify_
+_+reset()_
++initialize()
++agregarUsuario(unNombre: String): Usuario
++cantidadUsuarios(): Integer</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>920</x>
+      <y>350</y>
+      <w>280</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>Notebook
+--
+-titulo: String
+--
+_+conTitulo(unTitulo: String): Notebook_
++initializeConTitulo(unTitulo: String)
++crearNota(unTitulo: String): Nota
++borrarNota(unaNota: Nota)
++notaConTitulo(unTitulo:String): Nota
++notas(): Nota [*]
++notasFecha(unaFecha: Date): Nota [*]
++tamaño(): Integer
++titulo(): String
++cantidadNotas(): Integer</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>450</x>
+      <y>350</y>
+      <w>280</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>Nota
+--
+-titulo: String
+-texto: String
+-fechaDeCreacion: Date
+-tags: [*] String
+--
++titulo(): String
++fechaDeCreacion(): Date
++initialize()
++agregarTag(unTag: String)
++tamaño(): Integer
++texto(): String
++texto(unString: String)
++titulo(): String
++titulo(unTitulo: String)
++cantidadTags(): Integer</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>920</x>
+      <y>110</y>
+      <w>280</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>Usuario
+--
+-nombre: String
+--
+_+conNombre(unNombre: String): Usuario_
++initializeConNombre(unNombre: String)
++crearNotebook(unTitulo: String)
++borrarNotebook(unNotebook: Notebook)
++notasDeNotebook(unNotebook: Notebook): Nota [*]
++cantidadNotebooks(): Integer</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>730</x>
+      <y>180</y>
+      <w>210</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=* -usuarios</panel_attributes>
+    <additional_attributes>190.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>720</x>
+      <y>480</y>
+      <w>220</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=* -notas</panel_attributes>
+    <additional_attributes>10.0;10.0;200.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1050</x>
+      <y>250</y>
+      <w>100</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1= -notebooks</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>

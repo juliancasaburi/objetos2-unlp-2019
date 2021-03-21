@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>666</x>
+      <y>189</y>
+      <w>279</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;AbstractClass&gt;&gt;
+/Empleado/
+--
+_porcentajeDescuentoSueldo: Float_
+--
+_porcentajeDescuentoSueldo(): Float_
+_porcentajeDescuentoSueldo(unValor: Float)_
++descuentosSueldo(valorSueldo: Float): Float
++sueldo(): Float &lt;&lt;Template&gt;&gt;
+/+sueldoBruto(): Float/</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>261</x>
+      <y>495</y>
+      <w>252</w>
+      <h>342</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;ConcreteClass&gt;&gt;
+EmpleadoDePlanta
+--
+_plusPorHijo: Float_
+_sueldoBasico: Float_
+cantidadHijos: Integer
+--
+_plusPorHijo():Float_
+_plusPorHijo(unValor: Float)_
+_sueldoBasico():Float_
+_sueldoBasico(anObject: Object)_
++cantidadHijos(): Integer
++cantidadHijos(unaCantidad: Integer)
++sueldoBruto(): Float</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>702</x>
+      <y>495</y>
+      <w>279</w>
+      <h>342</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;ConcreteClass&gt;&gt;
+EmpleadoTemporario
+--
+_plus: Float_
+_sueldoBasico: Float_
+_valorHora: Float_
+cantidadHorasTrabajadas: Integer
+poseeHijos: Boolean
+estaCasado: Boolean
+--
+_valorHora():Float_
+_valorHora(anObject: Integer)_
+_sueldoBasico():Float_
+_sueldoBasico(anObject: Object)_
+_plus(unValor: Float)_
+_plus(): Float_
+-initialize()
++cantidadHorasTrabajadas(): Integer
++cantidadHorasTrabajadas(anObject: Integer)
++estaCasado(): Boolean
++estaCasado(anObject: Boolean)
++poseeHijos(): Boolean
++poseeHijos(anObject: Boolean)
++sueldoBruto(): Float
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1161</x>
+      <y>495</y>
+      <w>270</w>
+      <h>342</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;ConcreteClass&gt;&gt;
+EmpleadoPasante
+--
+_valorHora: Float_
+cantidadHorasTrabajadas: Integer
+--
+_valorHora():Float_
+_valorHora(anObject: Integer)_
++cantidadHorasTrabajadas(): Integer
++cantidadHorasTrabajadas(anObject: Integer)
++sueldoBruto(): Float</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>342</x>
+      <y>351</y>
+      <w>432</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>460.0;10.0;10.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>846</x>
+      <y>351</y>
+      <w>441</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;470.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>783</x>
+      <y>351</y>
+      <w>27</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;160.0</additional_attributes>
+  </element>
+</diagram>

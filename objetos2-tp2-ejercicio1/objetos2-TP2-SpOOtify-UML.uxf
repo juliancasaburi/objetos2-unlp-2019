@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>660</x>
+      <y>130</y>
+      <w>290</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>SpOOtify
+--
+_-UniqueInstance: SpOOtify_
+--
+_+singleton(): SpOOtify_
++reset()
++initialize()
++buscarPorAlbum(aString: String): Tema [*]
++buscarPorAutor(aString: String): Tema [*]
++buscarPorTitulo(aString: String): Tema [*]
++agregarUsuario(unNombre: String): Usuario
++agregarAutor(unNombre: String): Autor</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>200</x>
+      <y>500</y>
+      <w>280</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Album
+--
+-nombre: String
+--
++initialize()
++nombre(): String
+-temas(): Tema [*]
++temasConTitulo(aString: String): Tema [*]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>200</x>
+      <y>130</y>
+      <w>280</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Autor
+--
+-nombre: String
+--
++initialize()
++agregarAlbum(unAlbum: Album)
+-temas(): Tema [*]
++temasConTitulo(aString: String): Tema [*]
++nombre(): String
++temasDeAlbum(aString: String): Tema [*]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1130</x>
+      <y>500</y>
+      <w>280</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>MyMusic
+--
+--
++initialize()
++agregar(aSong: Tema)
++remover(aSong: Tema)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>660</x>
+      <y>500</y>
+      <w>280</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Tema
+--
+-titulo: String
+-genero: String
+--
++genero(): String
++titulo(): String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1130</x>
+      <y>130</y>
+      <w>280</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Usuario
+--
+-nombre: String
+--
++initialize()
++agregar(aSong: Tema)
++remover(aSong: Tema)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>470</x>
+      <y>250</y>
+      <w>210</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=* -autores</panel_attributes>
+    <additional_attributes>10.0;10.0;190.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>940</x>
+      <y>250</y>
+      <w>210</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=* -usuarios</panel_attributes>
+    <additional_attributes>190.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>330</x>
+      <y>310</y>
+      <w>90</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=* - albums</panel_attributes>
+    <additional_attributes>10.0;190.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>470</x>
+      <y>640</y>
+      <w>210</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=* -temas</panel_attributes>
+    <additional_attributes>190.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>930</x>
+      <y>640</y>
+      <w>220</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=* -temas</panel_attributes>
+    <additional_attributes>10.0;10.0;200.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1260</x>
+      <y>310</y>
+      <w>90</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1= -myMusic</panel_attributes>
+    <additional_attributes>10.0;190.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>

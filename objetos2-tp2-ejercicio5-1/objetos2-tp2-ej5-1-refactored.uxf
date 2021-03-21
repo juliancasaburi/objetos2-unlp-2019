@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>690</x>
+      <y>230</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>/Inmueble/
+--
+-superficie: Integer 
+--
+/+alicuotaImpuesto():Float/
+/+calcularBase():Float/
+/+calcularImpuesto():Float/
++impuestoAPagar():Float
++superficie(): Integer
++superficie(aNumber: Integer)
+/+tasa():Integer/</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>380</x>
+      <y>550</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>CasaFinDeSemana
+--
+
+--
++alicuotaImpuesto():Float
++calcularBase():Float
++calcularImpuesto():Float
++impuestoAPagar():Float
++tasa():Integer</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>950</x>
+      <y>550</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>/Inmueble/
+--
+
+--
++alicuotaImpuesto():Float
++calcularBase():Float
++calcularImpuesto():Float
++impuestoAPagar():Float
++tasa():Integer</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>490</x>
+      <y>470</y>
+      <w>630</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;80.0;10.0;20.0;610.0;20.0;610.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>790</x>
+      <y>410</y>
+      <w>30</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1020</x>
+      <y>230</y>
+      <w>350</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>Inmueble&gt;&gt; impuestoAPagar
+
+   | base |
+   base := self calcularBase.
+   ^ self calcularImpuesto: base.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>850</x>
+      <y>240</y>
+      <w>190</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;100.0;170.0;10.0</additional_attributes>
+  </element>
+</diagram>
